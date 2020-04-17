@@ -22,13 +22,32 @@ This sprint challenge is divided up into three parts:  Hash tables coding, block
 
 ## Interview Questions
 
-Explain in detail the workings of a dynamic array:
+* Explain in detail the workings of a dynamic array:
+
+    A dynamic array expands as you add more elements. So you don't need to determine the size ahead of time. When you reach capacity, the array increases size, normally doubling.  The elements of the dynamic array are stored contiguously, 
+
 * What is the runtime complexity to access an array, add or remove from the front, and add or remove from the back?
+
+    O(n) to double or increase by n
+
 * What is the worse case scenario if you try to extend the storage size of a dynamic array?
 
-Explain how a blockchain is structured. What are the blocks, what is the chain? How is the data organized?
+    O(n) and is also the normal case.
+
+* Explain how a blockchain is structured. What are the blocks, what is the chain? How is the data organized?
+
+    A blockchain is a growing list of records, called blocks, that are linked using cryptographic hashes. Each block contains a cryptographic hash of the previous block, a timestamp, and transaction data. The Blocks hold transaction details that are hashed and encoded. The Chain is what links blocks together which is hash of the previous block.
  
-Explain how proof of work functions. How does it operate. How does this protect the chain from attack. What kind of attack is possible?
+* Explain how proof of work functions. How does it operate. How does this protect the chain from attack. What kind of attack is possible?
+
+    How does it operate.
+    Proof of Work is used to confirm transactions or mined blocks. The answer to the proof of work is the Hash
+    
+    How does this protect the chain from attack.
+    Takes time to mine the hash of the current block. 
+    
+    What kind of attack is possible?
+    51% attack, or a majority attack. Group of users ban together to control mining, they can monopolize the generation of new blocks.
 
 ## Project Set Up
 
